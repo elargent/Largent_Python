@@ -1,0 +1,38 @@
+Input: List of names that are all presumed to be last names only
+Output: List of names that are sorted in alphabetical order (a -> z)
+
+Input_List = alex charles beth eric david…
+
+Sorted_List = first letters up until the very first space (i.e. the first name)
+
+	take the first name in the list and make it the first entry in sorted list
+		store this value in a new variable called sorted_list
+	take next name and pull it in to a temp variable
+		Create a nested while loop that compares the temp variable to the names in the sorted_list. Once a name is found where the temp variable precedes the current name from sorted_list, we exit the while loop. The names in the sorted list that come before the temp variable, if any, are then stored in one string, the names that come after temp variable, if any, are then stored in another string and a new sorted list variable is created that joins preceding_list, temp_variable, and following variables
+
+______________________________________
+
+Slightly more detailed
+
+Input List
+Sorted_list
+
+for i = 0 to space_count(Input_List)
+	current_name = name located after space i (first name when i = 0)
+	do 
+		j = 0
+		temp_name = name located at point j in sorted_list
+		if current_name comes before temp_name then do;
+			preceding_names = names included in sorted_list until jth space
+			following_names = 
+		
+
+
+
+
+
+
+
+
+
+		
