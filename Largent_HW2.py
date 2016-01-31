@@ -161,4 +161,3 @@ def generate_n_chars(int1,char1):
         str1 += char1
     return str1;
 
-
