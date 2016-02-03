@@ -7,12 +7,25 @@
 # --------------------------------- Homework 2 -------------------------------- #
 # ----------------------------------------------------------------------------- #
 
-get_ipython().system('ipython nbconvert --to script Largent_HW2.ipynb')
+#get_ipython().system('ipython nbconvert --to script Largent_HW2.ipynb')
 
 # 1) Define a function 'fib' that takes a number, 'n', as a parameter
 #    and prints all the Fibonacci numbers less than 'n' to the screen.
 
+##SEE Below for an example of using doc string to document your the purpose and paraeters
+##of your function. See the call to help(fib) below in my test cases.
+
 def fib(n):
+    """
+    This functions prints the series of Fibonacci numbers that are less than
+    the parameter n.
+
+    PARAMETERS:
+    n - integer
+
+    :param n: integer
+    :return:
+    """
     temp1 = 0
     temp2 = 1
     if n > 0:
@@ -62,7 +75,9 @@ def mylen(str1):
 # 5) Write a function that takes a character (i.e. a string of length 1) and 
 #    and returns True if it is a vowel, False otherwise.
 
-def myvowel(char):
+## What about 'o'ptial letters and ca?
+
+def vowel(char):
     if char == "a" or char == "e" or char == "i" or        char == "u" or char == "y": 
         return True
     else:
@@ -104,7 +119,7 @@ def multiply(list1):
 #    For example, revere ("I am testing") should return the string 
 #   "gnitset ma I".
 
-def reversal(str1):
+def reverse(str1):
     str2 = ""
     for i in reversed(range(len(str1))):
         str2 += str1[i]
@@ -162,3 +177,64 @@ def generate_n_chars(int1,char1):
     return str1;
 
 
+##TEST CASES
+
+print('#1\n')
+fib(500)
+help(fib)
+print('\n')
+
+print('#2\n')
+print(mymax(45,987), '\n')
+
+print('#3\n')
+print(mymax3(3,4,5),'\n')
+
+print('#4\n')
+print(mylen('Gerhard'))
+print(mylen([1,2,3,4,5,6,7]))
+print('\n')
+
+print('#5\n')
+print(vowel('e'))
+print(vowel('H'))
+print('\n')
+
+print('#6\n')
+print(translate("this is fun"))
+print(translate('aeiou'))
+print(translate('YYYYYYY'))
+print(translate("mmmmmm"))
+print('\n')
+
+print('#7\n')
+print(sum([1,2,3,4,5]))
+print('\n')
+
+print('#8\n')
+print(multiply([0,1,2,3]))
+print(multiply([1,2,3,4]))
+print('\n')
+
+print('#9\n')
+print(reverse("gnitset ma I"))
+print('\n')
+
+print('#10\n')
+print(is_palindrome('radar'))
+print(is_palindrome('Gerhard'))
+print('\n')
+
+print('#11\n')
+print(is_member('dog', ['cat', 'dog', 'zebra']))
+print(is_member(3, [1,2,3,4]))
+print(is_member(3, [5,6,7]))
+print('\n')
+
+print('#12\n')
+print(overlapping([1,2,3], [3,4,5]))
+print(overlapping([1,2,3], [6,4,5]))
+print('\n')
+
+print('#13\n')
+print(generate_n_chars(7, 'g'))
