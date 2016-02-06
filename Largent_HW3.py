@@ -7,11 +7,21 @@
 # --------------------------------- Homework 3 -------------------------------- #
 # ----------------------------------------------------------------------------- #
 
-get_ipython().system('ipython nbconvert --to script Largent_HW3.ipynb')
-
 #1
 
 def histogram(list1):
+    
+    """
+    This function, histogram, takes a list of integers and 
+    prints a histogram. 
+    
+    Parameters:
+    list1 - a list composed of integers
+    
+    Return:
+    Histogram formed by printing asterisks
+    """
+    
     for i in list1:
         temp1 = i
         while 0 < temp1:
@@ -22,6 +32,18 @@ def histogram(list1):
 #2
 
 def max_in_list(list1):
+    
+    """
+    This function, max_in_list, takes a list of integers or
+    decimals and returns the largest number in that list.
+    
+    Parameters:
+    list1 - a list composed of integers or decimals
+    
+    Return:
+    maxval - integer or decimal
+    """
+    
     max_val = list1[0]
     for i in list1:
         if i > max_val:
@@ -31,6 +53,19 @@ def max_in_list(list1):
 #3
 
 def list_converter(list1):
+    
+    """
+    This function, list_converter, takes a list of words
+    and returns a list of integers which correspond to the
+    length of each word.
+    
+    Parameters:
+    list1 - a list composed of words
+    
+    Return:
+    list2 - a list composed of integers
+    """
+        
     list2 = [0] * len(list1)
     for i in range(0,len(list1)):
         list2[i] = len(list1[i])
@@ -39,6 +74,18 @@ def list_converter(list1):
 #4
 
 def find_longest_word(list1):
+
+    """
+    This function, find_longest_word, takes a list of words
+    and returns the longest word in that list
+    
+    Parameters:
+    list1 - a list composed of words
+    
+    Return:
+    long_str - string
+    """    
+    
     long_str = len(list1[0])
     for i in range(0,len(list1)):
         if len(list1[i]) > long_str:
@@ -48,6 +95,20 @@ def find_longest_word(list1):
 #5
 
 def filter_long_words(list1,int1):
+    
+    """
+    This function, filter_long_words, takes a list of words
+    and an integer and then returns a list composed of
+    the words that have a length larger than the integer. 
+    
+    Parameters:
+    list1 - a list composed of words
+    int1 - integer
+    
+    Return:
+    list2 - a list composed of words
+    """        
+    
     list2 = []
     for i in range(0,len(list1)):
         if len(list1[i]) > int1:
@@ -57,6 +118,21 @@ def filter_long_words(list1,int1):
 #6
 
 def palindrome_rec(string1):
+    
+    """
+    This function, palindrome_rec, takes a string
+    and then tests to see if it is a palindrome
+    irrespective of punctuation and case. It returns 
+    'True' if the string is a palindrome, and 'False'
+    if it is not. 
+    
+    Parameters:
+    string1 - string
+    
+    Return:
+    True/False
+    """     
+    
     string2 = string1.lower()
     frwd, bkwd = "", ""
     for i in string2:
@@ -73,6 +149,20 @@ palindrome_rec("Was it a rat I saw?")
 #7
 
 def pangram_test(string1):
+    
+    """
+    This function, pangram, takes a string and tests
+    if it contains all the letters in the alphabet. 
+    It returns 'True' if it does contain all letters, 
+    and 'False' if it does not. 
+    
+    Parameters:
+    string1 - string
+    
+    Return:
+    True/False
+    """     
+    
     string2 = string1.lower()
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     for j in alphabet:
@@ -83,6 +173,18 @@ def pangram_test(string1):
 #8
 
 def bottles_99():
+    
+    """
+    This function, bottles_99, does not take any parameters.
+    It prints the song, '99 Bottles of Coke'. 
+    
+    Parameters:
+    None
+    
+    Return:
+    "99 Bottles of Coke" via print statements
+    """       
+    
     count = 99
     while count != 0:
         print(str(count) + " bottles of coke on the wall, " + str(count) + " bottles of coke.")
@@ -92,6 +194,20 @@ def bottles_99():
 #9
 
 def translate(string1):
+    
+    """
+    This function, translate, takes a string that contains
+    the words, "merry christmas and happy new year," and 
+    returns the phrase in Swedish. The words can be in any order,
+    but why butcher a traditional greeting?
+   
+    Parameters:
+    string1 - string containing above words
+    
+    Return:
+    string2 - string containing swedish words
+    """   
+    
     string1_list = string1.split()
     dictionary = {'merry':'god','christmas':'jul','and':'och',
                   'happy':'gott','new':'nytt','year':"år"}
@@ -107,6 +223,19 @@ def translate(string1):
 #10
 
 def char_freq(string1):
+    
+    """
+    This function, char_freq, takes a string and then returns
+    the frequency of each letter in the string. The frequency
+    is returned as a dictionary.
+    
+    Parameters:
+    string1 - string
+    
+    Return:
+    dictionary - dictionary indicating how many times each letter appears
+    """  
+    
     dictionary = {'a':0,'b':0,'c':0,'d':0,'e':0,'f':0,'g':0,'h':0,
                   'i':0,'j':0,'k':0,'l':0,'m':0,'n':0,'o':0,'p':0,
                   'q':0,'r':0,'s':0,'t':0,'u':0,'v':0,'w':0,'x':0,
@@ -119,6 +248,18 @@ def char_freq(string1):
 #11
 
 def decoder(string1):
+    
+    """
+    This function, decoder, takes a string and then either encodes or
+    decodes it based on a 13-letter Caesar cypher. 
+    
+    Parameters:
+    string1 - string
+    
+    Return:
+    string2 - encoded/decoded string
+    """
+    
     key ={'a':'n','b':'o','c':'p','d':'q','e':'r','f':'s','g':'t','h':'u',
           'i':'v','j':'w','k':'x','l':'y','m':'z','n':'a','o':'b','p':'c',
           'q':'d','r':'e','s':'f','t':'g','u':'h','v':'i','w':'j','x':'k',
@@ -137,6 +278,19 @@ def decoder(string1):
 #12
 
 def correct(string1):
+    
+    """
+    This function, correct, takes a string and returns a string
+    that corrects any incorrect spacing between words and ensures
+    there is a space after every period. 
+    
+    Parameters:
+    string1 - string
+    
+    Return:
+    string3 - string
+    """
+    
     string2 = ""
     for char in string1:
         if char == ".":
@@ -159,6 +313,18 @@ def correct(string1):
 
 def make_3sg_form(verb1):
     
+    """
+    This function, make_3sg_form, takes a singular verb and then 
+    returns the third-person singular form of the word. Note that
+    the function does not work in all cases.
+    
+    Parameters:
+    verb1 - string
+    
+    Return:
+    verb2 - string
+    """
+    
     if verb1.endswith("y") == True:
         verb2 = verb1[:-1] + "ies"
     elif verb1.endswith(("o","ch","s","sh","x","z")) == True:
@@ -170,6 +336,19 @@ def make_3sg_form(verb1):
 #14
 
 def make_ing_form(verb1):
+    
+    """
+    This function, make_ing_form, takes a verb in infinitive form and then 
+    returns the present participle form of the verb. Note that
+    the function does not work in all cases.
+    
+    Parameters:
+    verb1 - string
+    
+    Return:
+    verb2 - string
+    """    
+    
     if verb1.endswith("ie") == True:
         verb2 = verb1[:-2] + "ying"
     elif verb1.endswith("e") == True and verb1 != "be" and verb1.endswith("ee") == False:
