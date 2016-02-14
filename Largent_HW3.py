@@ -144,7 +144,7 @@ def palindrome_rec(string1):
     else:
         return False
     
-palindrome_rec("Was it a rat I saw?")
+#palindrome_rec("Was it a rat I saw?")
         
 #7
 
@@ -185,14 +185,14 @@ def bottles_99():
     "99 Bottles of Coke" via print statements
     """       
     
-    count = 99
+    count = 9
     while count != 0:
         print(str(count) + " bottles of coke on the wall, " + str(count) + " bottles of coke.")
         print("Take one down, pass it around, " + str(count-1) + " bottles of coke on the wall.")
         count -= 1
         
 #9
-
+## Specifications require a list of words, not a single string containing multiple words = Prof G
 def translate(string1):
     
     """
@@ -221,7 +221,7 @@ def translate(string1):
     return string2
 
 #10
-
+## Should only return counts for characters in the string. More helpful if the list is in alphabetical order.
 def char_freq(string1):
     
     """
@@ -360,3 +360,39 @@ def make_ing_form(verb1):
     return verb2
 
 
+##Test Cases
+
+print("1 Histogram ", histogram([1,2,3,5,6,7,6,5,4,3,2,1]), '\n')
+
+print("2 Max in List 77 ", max_in_list([1,2,3,77,4,5,6,7]), '\n')
+
+print("3 word to length map 3,5,7,4 ", list_converter(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("4 Longest word 7 ", find_longest_word(['dog', 'snake', 'dolphin', 'cats']), '\n')
+
+print("5 filter long words snake, dolphin ", filter_long_words(['dog', 'snake', 'dolphin', 'cats'],4), '\n')
+
+print("6 Palindrome phrase TRUE ", palindrome_rec("Go hang a salami I'm a lasagna hog."), '\n')
+
+print("7 Pangram TRUE ", pangram_test("The quick brown fox jumps over the lazy dog."), '\n')
+
+print("8 Cokes \n", bottles_99())
+
+##print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate(['merry', 'christmas', 'happy']), '\n')
+print("9 Translating to Swedish ['god', 'jul', 'gott'] ", translate('merry christmas happy'), '\n')
+
+print("10 Char Freq {'a': 7, 'c': 3, 'b': 14, 'e': 2, 'd': 3, 'g': 7, 'f': 3} ", char_freq("agbbabgcbdbabdgbdbabageebabcbgcbffgfabg"), '\n')
+
+print("11 Decoder Caesar cipher? I much prefer Caesar salad!", decoder("Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!"), '\n')
+
+print("12 correct This is very funny and cool. Indeed!", correct("This is very funny and cool.Indeed!"), '\n')
+
+print("13 3ps brushes ", make_3sg_form("brush"), '\n')
+print("13 3ps tries ", make_3sg_form("try"), '\n')
+print("13 3ps runs ", make_3sg_form("run"), '\n')
+print("13 3ps fixes ", make_3sg_form("fix"), '\n')
+
+print("14 ing lying ", make_ing_form("lie"), '\n')
+print("14 ing seeing ", make_ing_form("see"), '\n')
+print("14 ing moving ", make_ing_form("move"), '\n')
+print("14 ing hugging ", make_ing_form("hug"), '\n')
