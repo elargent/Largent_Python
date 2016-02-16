@@ -3,6 +3,8 @@ title: "Largent_HW5"
 output: html_document
 ---
 
+Note: For all problems, unless the output var is specified by the question, the output of the variable is indicated by the first letter of the output name: v is for vector, s is for scalar. 
+
 1) We explore vector declarations in R. The answer to each problem v1 + the letter of the particular problem. The one exception is for 1.d. where the answer is tmp.
 
 ```{r}
@@ -76,7 +78,7 @@ s7g <- yVec[order(xVec)]
 s7h <- yVec[seq(1,250,3)]  
 ```
 
-8)
+8) This problem uses the cumprod function in order to execute the proper summation. The output is a scalar.
 
 ```{r}
 s8 <- sum(cumprod(c(1,seq(2,38,2))/seq(1,39,2)))
